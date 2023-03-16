@@ -45,6 +45,7 @@ button {
 	padding: 5rem 5rem;
 	font-weight: 800;
 	font-size: 2.5rem;
+	min-height: 168px;
 }
 
 .colors-container .color-box {
@@ -52,4 +53,5 @@ button {
 	padding: 1rem;
 	border-radius: 1rem;
 	box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	min-width: 280px;
 }
