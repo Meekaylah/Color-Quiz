@@ -7,7 +7,6 @@ function generateColors() {
 	const arrColor = []
 	newColor.forEach((color) => {
 		let hexCode = '#' + Math.random().toString(16).substring(2,8);
-		//color.style.backgroundColor = hexCode
 		arrColor.push(hexCode)
 		console.log(hexCode)
 	});
