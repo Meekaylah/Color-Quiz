@@ -2,7 +2,6 @@ const newColor = [0, 1]
 const colors = document.querySelectorAll('.color-box h2');
 console.log(colors)
 
-
 function generateColors() {
 	const arrColor = []
 	newColor.forEach((color) => {
@@ -12,12 +11,12 @@ function generateColors() {
 	});
 	console.log(arrColor)
 	const sample = [0, 1, 2]
-	const shuffledArray = sample.sort(() => 0.5 - Math.random());
+	const shuffledArray = sample.sort(() => Math.random() - 0.5);
 	const result = shuffledArray.slice(0, 3);
 	console.log(result)
 	colors[result[0]].style.backgroundColor = arrColor[0]
-	colors[result[2]].style.backgroundColor = arrColor[0]
-	colors[result[1]].style.backgroundColor = arrColor[1]
+	colors[result[1]].style.backgroundColor = arrColor[0]
+	colors[result[2]].style.backgroundColor = arrColor[1]
 }
 
 generateColors();
