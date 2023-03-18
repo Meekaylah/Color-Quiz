@@ -20,3 +20,16 @@ function generateColors() {
 }
 
 generateColors();
+var num = 0
+function clickColors(elem){
+	var colorAlert = elem.style.backgroundColor
+	console.log(colorAlert)
+	for (var i = 0; i < colors.length; i++) {
+		if(colorAlert.includes(colors[i].style.backgroundColor)) {
+			console.log("Correct!")
+			// num += .5
+		}
+	}
+	generateColors()
+	console.log(num)
+}
