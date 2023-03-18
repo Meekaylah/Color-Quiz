@@ -4,7 +4,6 @@ console.log(colors)
 
 
 function generateColors() {
-	
 	const arrColor = []
 	newColor.forEach((color) => {
 		let hexCode = '#' + Math.random().toString(16).substring(2,8);
@@ -21,12 +20,5 @@ function generateColors() {
 	colors[result[2]].style.backgroundColor = arrColor[0]
 	colors[result[1]].style.backgroundColor = arrColor[1]
 }
-// function generateColors() {
-// 	colors.forEach((color) => {
-// 		let hexCode = '#' + Math.random().toString(16).substring(2,8);
-// 		color.style.backgroundColor = hexCode
-// 		console.log(hexCode)
-// 	});
-// }
 
 generateColors();
