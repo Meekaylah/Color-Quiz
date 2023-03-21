@@ -21,8 +21,8 @@ function generateColors() {
 
 generateColors();
 
-const startingMinutes = .1;
-let time = startingMinutes * 60;
+const startingMinutes = .34;
+let time = Math.floor(startingMinutes * 60);
 const countdownEl = document.getElementById('countdown');
 var interval = setInterval(timer, 1000);
 function timer() {
