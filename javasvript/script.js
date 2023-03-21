@@ -19,13 +19,12 @@ function generateColors() {
 	colors[result[2]].style.backgroundColor = arrColor[0]
 }
 
-const startingMinutes = 1;
+generateColors();
+
+const startingMinutes = .1;
 let time = startingMinutes * 60;
-
 const countdownEl = document.getElementById('countdown');
-
-setInterval(timer, 1000);
-
+var interval = setInterval(timer, 1000);
 function timer() {
 	const minutes = Math.floor(time / 60);
 	let seconds = time % 60;
@@ -34,8 +33,12 @@ function timer() {
 
 	countdownEl.innerHTML = `${minutes}:${seconds}`;
 	time--;
+
+	if(countdownEl.innerHTML == "0:00") {
+		clearInterval(interval)
+	}
 }
-generateColors();
+
 
 var score = 0;
 function clickColors(elem){
