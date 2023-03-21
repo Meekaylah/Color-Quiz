@@ -20,16 +20,25 @@ function generateColors() {
 }
 
 generateColors();
-var num = 0
+var score = 0
 function clickColors(elem){
 	var colorAlert = elem.style.backgroundColor
 	console.log(colorAlert)
+	var num = 0
 	for (var i = 0; i < colors.length; i++) {
-		if(colorAlert.includes(colors[i].style.backgroundColor)) {
-			console.log("Correct!")
-			// num += .5
+		if(colorAlert.includes(colors[i].style.backgroundColor)){
+			console.log("is not okay");
+			//isFirstTime = false;
+			num += 1
 		}
 	}
 	generateColors()
 	console.log(num)
+	if(num == 2){
+		score +=0
+	}
+	else {
+		score +=1
+	}
+	console.log("score =" + score)
 }
