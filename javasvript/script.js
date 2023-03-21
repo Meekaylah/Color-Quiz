@@ -14,13 +14,30 @@ function generateColors() {
 	const shuffledArray = sample.sort(() => Math.random() - 0.5);
 	const result = shuffledArray.slice(0, 3);
 	console.log(result)
-	colors[result[0]].style.backgroundColor = arrColor[0]
+	colors[result[0]].style.backgroundColor = arrColor[1]
 	colors[result[1]].style.backgroundColor = arrColor[0]
-	colors[result[2]].style.backgroundColor = arrColor[1]
+	colors[result[2]].style.backgroundColor = arrColor[0]
 }
 
+const startingMinutes = 1;
+let time = startingMinutes * 60;
+
+const countdownEl = document.getElementById('countdown');
+
+setInterval(timer, 1000);
+
+function timer() {
+	const minutes = Math.floor(time / 60);
+	let seconds = time % 60;
+
+	seconds = seconds < 10 ? '0' + seconds : seconds;
+
+	countdownEl.innerHTML = `${minutes}:${seconds}`;
+	time--;
+}
 generateColors();
-var score = 0
+
+var score = 0;
 function clickColors(elem){
 	var colorAlert = elem.style.backgroundColor
 	console.log(colorAlert)
@@ -41,4 +58,5 @@ function clickColors(elem){
 		score +=1
 	}
 	console.log("score =" + score)
-}
+};
+
