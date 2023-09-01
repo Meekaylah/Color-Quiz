@@ -3,7 +3,7 @@ function getRandomColor() {
     return `rgb(${red}, ${green}, ${blue})`;
 }
 
-const options = document.querySelectorAll('.color-box h2');
+const options = document.querySelectorAll('.color-option');
 let oddColorIndex;
 let timerActive = true; // Flag to track if the timer is active
 let countdown = 20; // Initial countdown time in seconds
