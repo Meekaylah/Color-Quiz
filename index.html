@@ -8,28 +8,28 @@
     <title>Quiz App</title>
 </head>
 <body>
-    <div class="container" id="blur">
+    <div class="container">
         <h1>Odd Color Out</h1>
         <p id="sub">Pick out the odd color before the time runs out... basically.</p>
         <p class="timer">0:20</p>
         <div class="colors-container">
             <div class="color-box">
-                <h2 onclick="clickColors(this)"></h2>
+                <h2></h2>
             </div>
             <div class="color-box">
-                <h2 onclick="clickColors(this)"></h2>
+                <h2></h2>
             </div>
             <div class="color-box">
-                <h2 onclick="clickColors(this)"></h2>
+                <h2></h2>
             </div>
         </div>
     </div>
     <div class="popup" id="popup">
         <div class="popup-content">
-            <p>Your Score: <span id="score">0</span></p>
+            <p class="your-score">Your Score: <span id="score">0</span></p>
             <button id="new-game-btn">New Game</button>
         </div>
     </div>
+    <script src="javascript/script.js" type="text/javascript"></script>
 </body>
-<script src="javasvript/script.js" type="text/javascript"></script>
 </html>
